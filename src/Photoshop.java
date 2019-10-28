@@ -37,6 +37,7 @@ public class Photoshop extends Application {
     Image image1 = new Image("image1.jpg");
     Image image2 = new Image("image2.jpg");
     Image image3 = new Image("image3.jpg");
+    Image tony =new Image("tony.png");
 
 
     @Override
@@ -130,11 +131,12 @@ public class Photoshop extends Application {
         MenuItem menuItem1 = new MenuItem("Image #2");
         MenuItem menuItem2 = new MenuItem("Image #3");
         MenuItem menuItem3 = new MenuItem("Réinitialiser");
+        MenuItem menuItem4 = new MenuItem("Tony");
         Menu menu = new Menu("Charger une image");
         Menu menu1 = new Menu("Actions");
         Menu menu2 = new Menu("Fichiers");
         menu1.getItems().addAll(menuItem3);
-        menu.getItems().addAll(menuItem, menuItem1, menuItem2);
+        menu.getItems().addAll(menuItem, menuItem1, menuItem2,menuItem4);
         menu2.getItems().addAll(menu);
 
         menuItem.setOnAction(event -> {
@@ -155,6 +157,10 @@ public class Photoshop extends Application {
             contraste.setValue(0);
             teinte.setValue(0);
             saturation.setValue(0);
+        });
+        menuItem4.setOnAction(event -> {
+            imageView.setImage(tony);
+            texteEnBas.setText("Tony chargé");
         });
 
         if (state == 0) {
