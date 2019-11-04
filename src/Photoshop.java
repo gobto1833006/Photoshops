@@ -160,7 +160,7 @@ public class Photoshop extends Application {
         });
         menuItem4.setOnAction(event -> {
             imageView.setImage(tony);
-            texteEnBas.setText("Tony chargé");
+            texteEnBas.setText("Tony chargé.");
         });
 
         if (state == 0) {
